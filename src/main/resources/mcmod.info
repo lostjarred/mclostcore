@@ -1,0 +1,16 @@
+[
+{
+  "modid": "locore",
+  "name": "Lo Core",
+  "description": "Just another core mod, for my mod handles common stuff",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Lostone1993"],
+  "credits": "The Forge and FML guys",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
