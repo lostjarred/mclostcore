@@ -14,8 +14,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = LoCoreMain.MODID, name = LoCoreMain.NAME, version = LoCoreMain.VERSION)
 public class LoCoreMain
 {
-    public static final String MODID = "locore";
-    public static final String NAME = "Lo Core";
+    public static final String MODID = "lostcore";
+    public static final String NAME = "Lost Core";
     public static final String VERSION = "1.0";
 
     public static final Logger LOGGER = LogManager.getLogger(MODID);
