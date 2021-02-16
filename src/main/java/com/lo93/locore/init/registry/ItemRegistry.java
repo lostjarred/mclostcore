@@ -15,7 +15,7 @@ public class ItemRegistry {
 	
 	public void RegisterItem(IForgeRegistry<Item> registry, Item itemin) {
 		registry.register(itemin);
-		modlogger.info("Registed " + itemin.getRegistryName().toString());
+		modlogger.info("Registed Item: " + itemin.getRegistryName().toString());
 	}
 	
 	public void RegisterItems(IForgeRegistry<Item> registry, Item[] itemins) {
