@@ -14,6 +14,6 @@ public class BiomeRegistry {
 	
  	public void RegisterBiome(IForgeRegistry<Biome> registry, Biome biomein) {
  		registry.register(biomein);
- 		logger.info("Registered " + biomein.getRegistryName().toString());
+ 		logger.info("Registered Biome: " + biomein.getRegistryName().toString());
  	}
 }
