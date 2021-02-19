@@ -7,18 +7,12 @@ import org.apache.logging.log4j.Logger;
 import com.lo93.locore.init.registry.ItemRegistry;
 import com.lo93.locore.proxy.CommonProxy;
 
-import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 
-
-@Mod(modid = LoCoreMain.MODID, name = LoCoreMain.NAME, version = LoCoreMain.VERSION)
+@Mod("lostcore")
 public class LoCoreMain
 {
-	@SidedProxy(serverSide = "com.lo93.locore.proxy.CommonProxy", clientSide = "com.lo93.locore.proxy.ClientProxy")
 	public static CommonProxy Proxy;
 	
     public static final String MODID = "lostcore";
@@ -28,16 +22,4 @@ public class LoCoreMain
     public static final Logger LOGGER = LogManager.getLogger(MODID);
     
     public static final ItemRegistry ITEMREGISTRY = new ItemRegistry(LOGGER);
-    
-    @EventHandler
-    public void preInit(FMLPreInitializationEvent event)
-    {
-    }
-
-    @EventHandler
-    public void init(FMLInitializationEvent event)
-    {
-        // mod heartbeat
-        LOGGER.info(NAME + " is loading");
-    }
 }
