@@ -7,7 +7,10 @@ import org.apache.logging.log4j.Logger;
 import com.lo93.locore.init.registry.ItemRegistry;
 import com.lo93.locore.proxy.CommonProxy;
 
+import creativetab.ModCreativeTab;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -28,6 +31,8 @@ public class LoCoreMain
     public static final Logger LOGGER = LogManager.getLogger(MODID);
     
     public static final ItemRegistry ITEMREGISTRY = new ItemRegistry(LOGGER);
+    
+    public static final CreativeTabs locorecreativetab = new ModCreativeTab(MODID, Items.ARROW);
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
