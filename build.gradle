@@ -16,9 +16,9 @@ def getDate() {
 	return formattedDate
 }
 
-version = "1.0"
+version = "1.0" + "-build-" + getDate()
 group = "com.lo93.locore" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "lostcore" + getDate()
+archivesBaseName = "lostcore"
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 compileJava {
