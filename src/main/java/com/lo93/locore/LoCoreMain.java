@@ -4,10 +4,11 @@ package com.lo93.locore;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.lo93.locore.creativetab.ModCreativeTab;
 import com.lo93.locore.init.registry.ItemRegistry;
 import com.lo93.locore.proxy.CommonProxy;
+import com.lo93.locore.utils.logger.HelperLoggerMessages;
 
-import creativetab.ModCreativeTab;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -32,7 +33,9 @@ public class LoCoreMain
     
     public static final ItemRegistry ITEMREGISTRY = new ItemRegistry(LOGGER);
     
-    public static final CreativeTabs locorecreativetab = new ModCreativeTab(MODID, Items.ARROW);
+    public static final CreativeTabs LOCORECREATIVETAB = new ModCreativeTab(MODID, Items.ARROW);
+    
+    public static final HelperLoggerMessages HLOGMSG = new HelperLoggerMessages(LOGGER, MODID);
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -43,6 +46,6 @@ public class LoCoreMain
     public void init(FMLInitializationEvent event)
     {
         // mod heartbeat
-        LOGGER.info(NAME + " is loading");
+    	HLOGMSG.logMsgHeartBeat();
     }
 }
