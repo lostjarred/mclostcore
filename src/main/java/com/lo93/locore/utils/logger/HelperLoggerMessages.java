@@ -6,7 +6,7 @@ public class HelperLoggerMessages {
 	private Logger logger;
 	private String modid;
 	
-	HelperLoggerMessages(Logger loggerin, String modidin){
+	public HelperLoggerMessages(Logger loggerin, String modidin){
 		this.logger = loggerin;
 		this.modid = modidin;
 	}
@@ -14,4 +14,21 @@ public class HelperLoggerMessages {
 	public void logMsgHeartBeat() {
 		logger.debug(modid + ": is Loading");
 	}
+	
+	public void logMsgRegModelstart() {
+		logger.debug(modid + ": Model Registion Start");
+	}
+	
+	public void logMsgRegModelend() {
+		logger.debug(modid + ": Model Registion End");
+	}
+	
+	public void logMsgRegItemstart() {
+		logger.debug(modid + "Item Registion Start");
+	}
+	
+	public void logMsgRegItemend() {
+		logger.debug(modid + ": Item Registion End");
+	}
+	
 }
