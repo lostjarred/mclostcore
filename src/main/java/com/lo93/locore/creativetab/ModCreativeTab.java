@@ -1,4 +1,4 @@
-package creativetab;
+package com.lo93.locore.creativetab;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
