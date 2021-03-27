@@ -10,10 +10,15 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
+def getDate() {
+	def date = new Date()
+	def formattedDate = date.format('yyyyMMddHHmmss')
+	return formattedDate
+}
 
 version = "1.0"
 group = "com.lo93.locore" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "lostcore"
+archivesBaseName = "lostcore" + getDate()
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 compileJava {
